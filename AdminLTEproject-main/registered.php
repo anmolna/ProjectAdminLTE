@@ -134,26 +134,26 @@ include ('config/dbcon.php');
                           if (mysqli_num_rows($sql_result) > 0) {
                             foreach ($sql_result as $row) {
                               ?>
-                                                  <tr>
-                                                    <td><?php echo $row['id']; ?></td>
-                                                    <td><?php echo $row['name']; ?></td>
-                                                    <td><?php echo $row['email']; ?>
-                                                    </td>
-                                                    <td><?php echo $row['phone']; ?></td>
-                                                     <td><?php echo $row['Role']; ?></td>
-                                                    <td>
-                                                      <a href="registered-edit.php?user_id=<?php echo $row['id']; ?>"  class="btn btn-info btn-sm">Edit</a>
-                                                      <a href="registered-delete.php?user_id=<?php echo $row['id']; ?>"class="btn btn-danger btn-sm">Delete</a>
-                                                    </td>
-                                                  </tr>
-                                                <?php
+                                                      <tr>
+                                                        <td><?php echo $row['id']; ?></td>
+                                                        <td><?php echo $row['name']; ?></td>
+                                                        <td><?php echo $row['email']; ?>
+                                                        </td>
+                                                        <td><?php echo $row['phone']; ?></td>
+                                                         <td><?php echo $row['Role']; ?></td>
+                                                        <td>
+                                                          <a href="registered-edit.php?user_id=<?php echo $row['id']; ?>"  class="btn btn-info btn-sm">Edit</a>
+                                                          <a href="registered-delete.php?user_id=<?php echo $row['id']; ?>"class="btn btn-danger btn-sm">Delete</a>
+                                                        </td>
+                                                      </tr>
+                                                    <?php
                             }
                           } else {
                             ?>
-                                      <tr>
-                                        <td>No record Found</td>
-                                      </tr>
-                                      <?php
+                                        <tr>
+                                          <td>No record Found</td>
+                                        </tr>
+                                        <?php
                           }
 
                           ?>

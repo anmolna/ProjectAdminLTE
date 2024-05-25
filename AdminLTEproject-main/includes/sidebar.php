@@ -14,7 +14,7 @@
           <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Anmol Nayyar</a>
+          <a href="#" class="d-block"><?php echo $_SESSION['username']; ?></a>
         </div>
       </div>
 
@@ -39,6 +39,20 @@
           
       <ul>
           <li><a href="event.php">Event</a></li>
+        </ul>
+
+        <ul>
+          
+           <li>
+    <form action="profile.php" method="POST" style="display: inline;">
+        <input type="hidden" name="email" value="<?php echo $_SESSION['email']; ?>">
+        <button type="submit" name="profile" style="background: none; border: none; color: white; cursor: pointer; font: inherit; outline: inherit;">
+            Profile
+        </button>
+    </form>
+</li>
+
+         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
